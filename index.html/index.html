@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url("https://www.istoedinheiro.com.br/wp-content/uploads/sites/17/2021/09/espaco-1280x720.jpeg");
+            background-color: #cccccc;
+            font-size: 16px;
+            display: grid;
+            place-items: center;
+            border: 50vh solid #00d800;
+            height: 100vh;
+            transition: 1s;
+        }
+
+        body:hover {
+            border-width: 100px;
+        }
+
+        body:hover #divCenter {
+            opacity: 1;
+        } 
+
+        #divCenter {
+            background-color: rgba(0, 0, 0, .5);
+            opacity: 0;
+            transition: 1s;
+            padding: 40px 20px;
+        }
+
+        table th {
+            color: white;
+            font-weight: normal;
+        }
+
+        td, th {
+            padding: 3px;
+        }
+
+        input {
+            padding: 5px 10px;
+            width: 100%;
+        }
+
+        button {
+            background: #00d800;
+            color: #ffffff;
+            text-transform: uppercase;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            transition: .2s;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: chartreuse;
+            letter-spacing: 2px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="divCenter">
+
+        <form action="">
+            <table>
+                <tr>
+                    <th>Seu nome</th>
+                    <td><input type="text" /></td>
+                </tr>
+                <tr>
+                    <th>Nascimento</th>
+                    <td><input type="datetime-local"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td>
+                        <button onclick="myFunction()">Envie aqui</button>
+                    </td>
+                </tr>
+            </table>
+
+
+            <script>
+                function myFunction() {
+                    alert("Dados gravados!!");
+                }
+            </script>
+
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>
