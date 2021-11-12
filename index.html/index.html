@@ -1,114 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: Tahoma;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-image: url("https://www.istoedinheiro.com.br/wp-content/uploads/sites/17/2021/09/espaco-1280x720.jpeg");
-            background-color: #cccccc;
-            font-size: 16px;
-            display: grid;
-            place-items: center;
-            border: 50vh solid #00d800;
-            height: 100vh;
-            transition: 1s;
-        }
-
-        body:hover {
-            border-width: 100px;
-        }
-
-        body:hover #divCenter {
-            opacity: 1;
-        } 
-
-        #divCenter {
-            background-color: rgba(0, 0, 0, .5);
-            opacity: 0;
-            transition: 1s;
-            padding: 40px 20px;
-        }
-
-        table th {
-            color: white;
-            font-weight: normal;
-        }
-
-        td, th {
-            padding: 3px;
-        }
-
-        input {
-            padding: 5px 10px;
-            width: 100%;
-        }
-
-        button {
-            background: #00d800;
-            color: #ffffff;
-            text-transform: uppercase;
-            border: none;
-            padding: 10px;
-            font-weight: bold;
-            width: 100%;
-            cursor: pointer;
-            transition: .2s;
-            letter-spacing: 1px;
-        }
-
-        button:hover {
-            background: chartreuse;
-            letter-spacing: 2px;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-
 <body>
-    <div id="divCenter">
+    <div class="container">
+        <div class="inner-container">
+            <p id="contador"></p>
+            <button mais="mais" type="button">Mais</button>
+            <button id="Zerar" type="button">Zerar</button>
+            <button id="menos" type="button">Menos</button>
+            <div id="texto"></div>
 
-        <form action="">
-            <table>
-                <tr>
-                    <th>Seu nome</th>
-                    <td><input type="text" /></td>
-                </tr>
-                <tr>
-                    <th>Nascimento</th>
-                    <td><input type="datetime-local"></td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <td>
-                        <button onclick="myFunction()">Envie aqui</button>
-                    </td>
-                </tr>
-            </table>
-
-
-            <script>
-                function myFunction() {
-                    alert("Dados gravados!!");
-                }
-            </script>
-
-        </form>
+        </div>
 
 
     </div>
+    
+        <script>
+       const btn$ = document.getElementById('mais');
+const btn2$ = document.getElementById('menos');
+const z$ = document.getElementById('Zerar');
+const t$ = document.getElementById('texto');
+const c$ = document.getElementById('contador');
 
 
-</body>
+let contador = 0;
 
-</html>
+c$.innerHTML = contador;
+
+btn$.addEventListener('click', function () {
+    c$.innerHTML = ++contador;
+    t$.innerHTML = ""
+});
+
+btn2$.addEventListener('click', function () {
+    if(c$.innerHTML>0){
+        c$.innerHTML = --contador;
+    } else {
+        t$.innerHTML = "Chegou em 0"
+    }
+});
+
+z$.addEventListener('click', function () {
+    c$.innerHTML = contador = 0;
+    t$.innerHTML = ""
+});
+        </script>
+  </head>
+  </body>
