@@ -13,31 +13,31 @@
         <div class="inner-container">
             <p id="number">0</p>
             <button onclick="mais()" id="mais">mais</button>
-            <button onclick="reset()">reset</button>
             <button onclick="menos()" id="menos">menos</button>
+            <button onclick="reset()" id="zerar">reset</button>
         </div>
 
 
     </div>
     
         <script>
-        const p = document.getElementById("number")
-        var num = 0
+        const bb = document.getElementById("number")
+        let num = 0
 
         function mais() {
-            p.innerText = num = num + 5
+            bb.innerText = num = num + 5
             
         }
 
 
         function menos() {
-            p.innerText = num = num - 5 
+            bb.innerText = num = num - 5 
 
         }
 
 
         function reset() {
-            p.innerText = num = 0
+            bb.innerText = num = 0
             
         }
 
