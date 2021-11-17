@@ -1,13 +1,34 @@
+
+   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 1rem;
+    border-radius: 1.3rem;
+    padding: 0.5rem;
+    background: rgb(165, 139, 139);
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+}
+
 #mais{
     background-color: #4CAF50;
         border: none;
-        color: white;
+        color: rgb(248, 0, 0);
         padding: 15px 32px;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
+      
+        
 }
 #menos{
     background-color: #4CAF50;
