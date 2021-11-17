@@ -11,46 +11,37 @@
 <body>
     <div class="container">
         <div class="inner-container">
-            <p id="contador"></p>
-            <button mais="mais" type="button">Mais</button>
-            <button id="Zerar" type="button">Zerar</button>
-            <button id="menos" type="button">Menos</button>
-            <div id="texto"></div>
-
+            <p id="number">0</p>
+            <button onclick="mais()" id="mais">mais</button>
+            <button onclick="reset()">reset</button>
+            <button onclick="menos()" id="menos">menos</button>
         </div>
 
 
     </div>
     
         <script>
-       const btn$ = document.getElementById('mais');
-const btn2$ = document.getElementById('menos');
-const z$ = document.getElementById('Zerar');
-const t$ = document.getElementById('texto');
-const c$ = document.getElementById('contador');
+        const p = document.getElementById("number")
+        var num = 0
+
+        function mais() {
+            p.innerText = num = num + 5
+            
+        }
 
 
-let contador = 0;
+        function menos() {
+            p.innerText = num = num - 5 
 
-c$.innerHTML = contador;
+        }
 
-btn$.addEventListener('click', function () {
-    c$.innerHTML = ++contador;
-    t$.innerHTML = ""
-});
 
-btn2$.addEventListener('click', function () {
-    if(c$.innerHTML>0){
-        c$.innerHTML = --contador;
-    } else {
-        t$.innerHTML = "Chegou em 0"
-    }
-});
+        function reset() {
+            p.innerText = num = 0
+            
+        }
 
-z$.addEventListener('click', function () {
-    c$.innerHTML = contador = 0;
-    t$.innerHTML = ""
-});
-        </script>
+      </script>
   </head>
   </body>
+
