@@ -1,26 +1,28 @@
-
-   
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .container{
-    margin: 1rem;
-    border-radius: 1.3rem;
-    padding: 0.5rem;
-    background: rgb(165, 139, 139);
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
-    text-align: center;
-
+    text-align:center;
+    background-color: rgb(5, 5, 5);
+    color:rgb(158, 126, 66);
+    font-size: 22px;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+body{
+    background-color: rgb(39, 83, 83);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 }
 
 #mais{
     background-color: #4CAF50;
         border: none;
-        color: rgb(248, 0, 0);
+        color: white;
         padding: 15px 32px;
         text-decoration: none;
         display: inline-block;
