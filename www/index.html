@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador</title>
 </head>
+
 <body>
     <div class="inner-container">
         <p id="number">0</p>
         <button onclick="mais()" id="mais">mais</button>
         <button onclick="reset()">reset</button>
         <button onclick="menos()" id="menos">menos</button>
-        
     </div>
 
-
-</div>
-
     <script>
-   const bb = document.getElementById("number")
-   let num = 0
-function mais(){
-    bb.innerText = ++ num
-}
-function menos(){
-    bb.innerText = --num
-}
+        const bb = document.getElementById("number")
+        let num = 0
+        function mais() {
+            bb.innerText = ++num
+        }
+        function menos() {
+            bb.innerText = --num
+        }
 
-function reset (){
-    bb.innerText = 0
-}
-
+        function reset() {
+            bb.innerText = 0
+        }
     </script>
 </body>
+
 </html>
