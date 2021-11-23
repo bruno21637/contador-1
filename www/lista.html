@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="lista"></ul>
+  <input><button onclick="adicionar()">add</button>
+  <script>
+    // elementos que vou precisar
+    const ul = document.querySelector("#lista")
+    const input = document.querySelector("input")
+
+    // estado da aplicação
+    const tarefas = ["Coisa 1 a ser feita", "Outra coisa"]
+
+    // modificadores de estado da aplicação
+    function adicionar() {
+      tarefas.push(input.value)
+      render()
+    }
+
+    // mostrar estado da aplicação na tela
+    function render() {
+      ul.innerHTML = null
+      tarefas.forEach(function (t) {
+        const li = document.createElement("li")
+        li.innerText = t
+        ul.appendChild(li)
+      })
+      input.value = ""
+    }
+
+    render()
+  </script>
+</body>
+
+</html>
