@@ -17,18 +17,32 @@
     </div>
 
     <script>
+        // elementos html que preciso referenciar
         const bb = document.getElementById("number")
+
+        // estado da aplicação
         let num = 0
+
+        // modificadores de estado
         function mais() {
-            bb.innerText = ++num
+            ++num
+            render()
         }
         function menos() {
-            bb.innerText = --num
+            --num
+            render()
         }
 
         function reset() {
-            bb.innerText = 0
+            num = 0
+            render()
         }
+
+        // render da aplicação
+        function render() {
+            bb.innerText = num
+        }
+
     </script>
 </body>
 
