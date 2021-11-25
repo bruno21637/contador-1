@@ -17,7 +17,21 @@
         <button onclick="reset()" id="zerar">reset</button>
         <button onclick="menos()" id="menos">menos</button>
         <button id ="menos" >
-            <a href="lista.html"> clique aqui para ser redirecionado para a lista de tarefas</a></button>
+         <a href="lista.html"> clique aqui para ser redirecionado para a lista de tarefas
+         </a>
+        </button>
+        
+    </div>
+    <div class="container">
+        <p id="number">0</p>
+        <button onclick="mais2()" id="mais">mais</button>
+        <button onclick="reset2()" id="zerar">reset</button>
+        <button onclick="menos2()" id="menos">menos</button>
+        <button id ="menos" >
+         <a href="lista.html"> clique aqui para ser redirecionado para a lista de tarefas
+         </a>
+        </button>
+        
     </div>
 
     <script>
@@ -26,7 +40,7 @@
 
         // estado da aplicação
         let num = 0
-        let num2 = 2;
+        
 
         // modificadores de estado
         function mais() {
@@ -39,6 +53,19 @@
         }
 
         function reset() {
+            num = 0
+            render()
+        }
+        function mais2() {
+            ++num
+            render()
+        }
+        function menos2() {
+            --num
+            render()
+        }
+
+        function reset2() {
             num = 0
             render()
         }
