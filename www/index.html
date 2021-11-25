@@ -16,6 +16,8 @@
         <button onclick="mais()" id="mais">mais</button>
         <button onclick="reset()" id="zerar">reset</button>
         <button onclick="menos()" id="menos">menos</button>
+        <button id ="menos" >
+            <a href="lista.html"> clique aqui para ser redirecionado para a lista de tarefas</a></button>
     </div>
 
     <script>
@@ -24,6 +26,7 @@
 
         // estado da aplicação
         let num = 0
+        let num2 = 2;
 
         // modificadores de estado
         function mais() {
@@ -39,7 +42,7 @@
             num = 0
             render()
         }
-
+       
         // render da aplicação
         function render() {
             bb.innerText = num
